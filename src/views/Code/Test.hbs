@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/test.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1>Kiểm Tra</h1>
+        <form action="/data" method="post">
+
+            <div>
+                {{#each data}} <div>
+                    <div class="img-question">
+                        {{#if Id }}
+                        <p>{{this.Id}}.{{this.question}}</p>
+
+                        {{#if img}}
+                        <img src={{this.img}}>
+                    </div>
+                    {{else}}
+                    <audio controls>
+                        <source src={{this.audio}} type="audio/mpeg">
+                    </audio>
+                </div>
+                {{/if}}
+                <br>
+                <div class="answer-center">
+                    {{#each this.answer}}
+                    <input type="radio" id="lname" name="{{@...index}}" value="{{this.id}}">
+                    <label>{{this.Traloi}}</label>
+                    <br>
+                    {{/each}}
+                </div>
+                {{/if}}
+                {{/each}}
+
+
+            </div>
+
+            <button class="SendDt" type="submit">Nộp bài</button>
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "kiemtra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sever.js",
+  "scripts": {
+    "watch": "node-sass --watch src/views/scss/app.scss src/public/css/app.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/sever.js",
+    "Sign": "node-sass --watch src/views/scss/Sign.scss src/public/css/sign.css",
+    "Test": "node-sass --watch src/views/scss/Test.scss src/public/css/test.css",
+    "Log": "node-sass --watch src/views/scss/Log.scss src/public/css/log.css",
+    "answer": "node-sass --watch src/views/scss/answer.scss src/public/css/Answer.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "7.22.1",
+    "@babel/node": "7.22.1",
+    "@babel/preset-env": "7.22.4",
+    "body-parser": "1.20.2",
+    "ejs": "3.1.9",
+    "express": "4.18.2",
+    "express-handlebars": "^7.0.7",
+    "handlebars": "^4.7.7",
+    "mysql": "^2.18.1",
+    "node-sass": "8.0.0",
+    "nodemon": "2.0.22"
+  }
+}
